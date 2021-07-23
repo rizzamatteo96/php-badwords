@@ -13,7 +13,28 @@
 </head>
 <body>
 
+  <!-- Frase di partenza -->
+  <h2>Frase originale</h2>
 
+  <p>
+    <?php 
+
+      echo $frase;
+
+    ?>
+  </p>
+
+  <!-- Frase modificata -->
+  <h2>Frase modificata</h2>
+
+  <p>
+    <?php 
+    
+      $fraseCensurata = str_replace($censura, '***' , $frase);
+      echo $fraseCensurata;
+    
+    ?>
+  </p>
     
 </body>
 </html>
