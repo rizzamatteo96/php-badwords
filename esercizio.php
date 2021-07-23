@@ -15,26 +15,35 @@
 
   <!-- Frase di partenza -->
   <h2>Frase originale</h2>
-
   <p>
     <?php 
 
+      // stampo la frase primaria
       echo $frase;
+      // ne calcolo la quantità di caratteri
+      $frase_len = strlen($frase);
 
     ?>
   </p>
+  <!-- stampo la lunghezza della frase primaria -->
+  <p>La lunghezza della frase è di <?php echo $frase_len; ?> caratteri</p>
 
   <!-- Frase modificata -->
   <h2>Frase modificata</h2>
-
   <p>
     <?php 
     
+      // Censuro la frase primaria attraverso l'input dell'utente
       $fraseCensurata = str_replace($censura, '***' , $frase);
+      // stampo la frase modificata
       echo $fraseCensurata;
+      // ne calcolo la quantità di caratteri
+      $fraseCensurata_len = strlen($fraseCensurata);
     
     ?>
   </p>
+   <!-- stampo la lunghezza della frase modificata -->
+   <p>La lunghezza della frase è di <?php echo $fraseCensurata_len; ?> caratteri</p>
     
 </body>
 </html>
